@@ -4,29 +4,30 @@ on:
   push:
     branches:
       - main
-      - master
   pull_request:
     branches:
       - main
 
 jobs:
-  build:
+  build-and-test:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
+    - name: Checkout repository
       uses: actions/checkout@v3
 
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: '9.0.x'  # Ajuste à ta version .NET
-
+        dotnet-version: '9.0.x'
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore AltenShop.sln
 
-    - name: Build
-      run: dotnet build --no-restore --configuration Release
+    - name: Build solution
+      run: dotnet build AltenShop.sln --no-restore --configuration Release
 
-    - name: Run tests
-      run: dotnet test --no-build --configuration Release --verbosity normal
+    - name: Run unit tests
+      run: dotnet test Api.UnitTests/Api.UnitTests.csproj --no-build --configuration Release --verbosity normal
+
+    - name: Run integration tests
+      run: dotnet test Api.IntegrationTests/Api.IntegrationTests.csproj --no-build --configuration Release --verbosity normal
