@@ -1,7 +1,7 @@
 ﻿using Api.Data;
 using Microsoft.EntityFrameworkCore;
 
-namespace Api.Tests.Helpers;
+namespace Api.UnitTests.Helpers;
 
 internal static class DatabaseHelper
 {

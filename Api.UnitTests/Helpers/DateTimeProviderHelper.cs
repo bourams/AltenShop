@@ -1,7 +1,7 @@
 ﻿using Api.Common;
 using NSubstitute;
 
-namespace Api.Tests.Helpers;
+namespace Api.UnitTests.Helpers;
 
 internal static class DateTimeProviderHelper
 {

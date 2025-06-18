@@ -4,7 +4,7 @@ using Api.Enums;
 using Api.Profiles;
 using AutoMapper;
 
-namespace Api.Tests.Mappings;
+namespace Api.UnitTests.Mappings;
 
 public class ProductMappingTests
 {

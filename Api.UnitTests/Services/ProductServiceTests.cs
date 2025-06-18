@@ -3,12 +3,12 @@ using Api.Data.Repositories;
 using Api.Dtos;
 using Api.Enums;
 using Api.Services;
-using Api.Tests.Helpers;
+using Api.UnitTests.Helpers;
 using AutoMapper;
 using NSubstitute;
 using NSubstitute.ReceivedExtensions;
 
-namespace Api.Tests.Services;
+namespace Api.UnitTests.Services;
 
 public class ProductServiceTests
 {

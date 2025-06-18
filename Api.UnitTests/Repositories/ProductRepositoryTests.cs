@@ -1,9 +1,9 @@
 ﻿using Api.Data;
 using Api.Data.Models;
 using Api.Data.Repositories;
-using Api.Tests.Helpers;
+using Api.UnitTests.Helpers;
 
-namespace Api.Tests.Repositories;
+namespace Api.UnitTests.Repositories;
 
 public class ProductRepositoryTests
 {

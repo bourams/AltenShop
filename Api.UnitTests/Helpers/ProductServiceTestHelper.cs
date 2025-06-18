@@ -1,7 +1,7 @@
 ﻿using Api.Data.Models;
 using Api.Dtos;
 
-namespace Api.Tests.Helpers;
+namespace Api.UnitTests.Helpers;
 
 internal static class ProductServiceTestHelper
 {
